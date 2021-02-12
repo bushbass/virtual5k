@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import Layout from '../components/Layout';
 
 export default function MyApp({ Component, pageProps }) {
@@ -7,3 +8,6 @@ export default function MyApp({ Component, pageProps }) {
     </Layout>
   );
 }
+Layout.propTypes = {
+  children: PropTypes.any,
+};

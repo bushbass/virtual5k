@@ -1,9 +1,10 @@
 import PropTypes from 'prop-types';
+import Header from './Header';
 
 export default function Layout({ children }) {
   return (
     <div>
-      <header> I'm the layout component header</header>
+      <Header />
       <div>{children}</div>
       <footer>im the layout componet footer</footer>
     </div>
