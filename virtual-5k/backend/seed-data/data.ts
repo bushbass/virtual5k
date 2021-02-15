@@ -5,7 +5,7 @@ function timestamp() {
   return new Date(stampy).toISOString();
 }
 
-export const products = [
+export const races = [
   {
     name: 'Yeti Hondo',
     description: 'soo nice',

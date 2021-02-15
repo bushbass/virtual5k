@@ -8,6 +8,7 @@ import {
 import { User } from './schemas/User';
 import { Race } from './schemas/Race';
 import { RaceImage } from './schemas/RaceImage';
+import { insertSeedData } from './seed-data';
 
 const databaseURL =
   process.env.DATABASE_URL || 'mongodb://localhost/keystone-sick-fits-tutorial';
@@ -41,6 +42,12 @@ export default withAuth(
       adapter: 'mongoose',
       url: databaseURL,
       // TODO: Add data seeding here
+      async onConnect(keystone) {
+        console.log('connect to bd');
+        if (process.argv.includes('--seed-data')) {
+          await insertSeedData(keystone);
+        }
+      },
     },
     lists: createSchema({
       // Schema items go in here
