@@ -7,6 +7,7 @@ import {
 } from '@keystone-next/keystone/session';
 import { User } from './schemas/User';
 import { Race } from './schemas/Race';
+import { RaceImage } from './schemas/RaceImage';
 
 const databaseURL =
   process.env.DATABASE_URL || 'mongodb://localhost/keystone-sick-fits-tutorial';
@@ -45,6 +46,7 @@ export default withAuth(
       // Schema items go in here
       User,
       Race,
+      RaceImage,
     }),
     ui: {
       // show ui only for people who pass this test
