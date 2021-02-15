@@ -11,7 +11,4 @@ The best place to get help is in the #advanced-react slack room - there is a lin
 ## FAQ
 
 **Q:** Which Extensions for VS Code is Wes using?  
-**A:** All my extensions are listed on [my dotfiles repo](https://github.com/wesbos/dotfiles), but specifically this course uses [ESLint](https://github.com/Microsoft/vscode-eslint) and [Prettier](https://github.com/prettier/prettier-vscode ) 
-.
-
-fake Update
+**A:** All my extensions are listed on [my dotfiles repo](https://github.com/wesbos/dotfiles), but specifically this course uses [ESLint](https://github.com/Microsoft/vscode-eslint) and [Prettier](https://github.com/prettier/prettier-vscode).
