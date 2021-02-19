@@ -13,7 +13,6 @@ Router.events.on('routeChangeError', () => NProgress.done());
 function MyApp({ Component, pageProps, apollo }) {
   return (
     <ApolloProvider client={apollo}>
-      {console.log(apollo)}
       <Layout>
         <Component {...pageProps} />
       </Layout>
