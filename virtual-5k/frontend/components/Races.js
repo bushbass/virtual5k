@@ -3,7 +3,7 @@ import gql from 'graphql-tag';
 import styled from 'styled-components';
 import Race from './Race';
 
-const ALL_RACES_QUERY = gql`
+export const ALL_RACES_QUERY = gql`
   query ALL_RACES_QUERY {
     allRaces {
       id

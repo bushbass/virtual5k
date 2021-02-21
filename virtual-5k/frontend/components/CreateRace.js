@@ -3,6 +3,7 @@ import gql from 'graphql-tag';
 import useForm from '../lib/useForm';
 import Form from './styles/Form';
 import DisplayError from './ErrorMessage';
+import { ALL_RACES_QUERY } from './Races';
 
 const CREATE_RACE_MUTATION = gql`
   mutation CREATE_RACE_MUTATION(
@@ -36,10 +37,13 @@ export default function CreateRace() {
     price: 2345,
     description: 'a greate reace for emvyone',
   });
-  const [
-    createRace,
-    { error, loading, data },
-  ] = useMutation(CREATE_RACE_MUTATION, { variables: inputs });
+  const [createRace, { error, loading, data }] = useMutation(
+    CREATE_RACE_MUTATION,
+    {
+      variables: inputs,
+      refetchQueries: [{ query: ALL_RACES_QUERY }],
+    }
+  );
   return (
     <Form
       onSubmit={async (e) => {
@@ -63,7 +67,7 @@ export default function CreateRace() {
           />
         </label>
         <label htmlFor="name">
-          name
+          Name
           <input
             onChange={handleChange}
             value={inputs.name}
@@ -74,7 +78,7 @@ export default function CreateRace() {
           />
         </label>
         <label htmlFor="price">
-          name
+          Price
           <input
             onChange={handleChange}
             value={inputs.price}

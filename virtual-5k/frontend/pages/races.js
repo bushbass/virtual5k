@@ -1,7 +1,9 @@
+import Races from '../components/Races';
+
 export default function RacesPage() {
   return (
     <div>
-      <p>races</p>
+      <Races />
     </div>
   );
 }
