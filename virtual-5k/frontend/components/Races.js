@@ -28,7 +28,7 @@ const RacesListStyled = styled.div`
 
 export default function Races() {
   const { data, loading, error } = useQuery(ALL_RACES_QUERY);
-  console.log({ data, loading, error });
+
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {error.message}</p>;
   return (

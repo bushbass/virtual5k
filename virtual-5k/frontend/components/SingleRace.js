@@ -8,14 +8,12 @@ const RaceStyles = styled.div`
   display: grid;
   grid-auto-columns: 1fr;
   grid-auto-flow: column;
-
   justify-content: center;
   align-items: center;
   gap: 2rem;
   max-width: var(--maxWidth);
   img {
     width: 100%;
-
     object-fit: contain;
   }
 `;
